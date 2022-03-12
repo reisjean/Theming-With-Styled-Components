@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darken, lighten, transparentize, saturate } from 'polished';
+import { darken, lighten, transparentize } from 'polished';
 import { CentralizedFlex } from '../../styles/global';
 import bg from '../../images/bg.jpeg';
 
@@ -12,13 +12,13 @@ export const Container = styled.main`
 
   .content{
     grid-area: content;
-    background-color: ${props => darken(0.1, saturate(0.8, transparentize(0.2, props.theme.colors.primary)))};
+    background-color: ${props => darken(0.1, transparentize(0.2, props.theme.colors.primary))};
     
     ${CentralizedFlex};
     flex-flow: column;
 
     h1{
-      color: ${props => lighten(0.25, props.theme.colors.primary)};
+      color: ${props => lighten(0.15, props.theme.colors.secondary)};
       font-size: 7rem;
     }
 
@@ -26,17 +26,17 @@ export const Container = styled.main`
       font-size: 1.4rem;
       text-align: center;
       line-height: 1.1;
-      color: ${props => darken(0.4, props.theme.colors.primary)};
+      color: ${props => props.theme.colors.text};
       margin: 2rem 0;
-      background-color: ${props => transparentize(0.8, props.theme.colors.primary)};
+      background-color: ${props => transparentize(0.8, props.theme.colors.secondary)};
       padding: 1rem 2rem;
-      border: 2px solid ${props => transparentize(0.7, props.theme.colors.primary)};
+      border: 2px solid ${props => darken(0.2, props.theme.colors.primary)};
     }
   }
 
   nav{
     grid-area: nav;
-    background-color: ${props => darken(0.2, props.theme.colors.primary)};
+    background-color: ${props => darken(0.25, props.theme.colors.secondary)};
     padding: 0.6rem 2rem;
 
     ul{
@@ -46,7 +46,7 @@ export const Container = styled.main`
       
       li{
         padding: 0 1rem;
-        color: ${props => lighten(0.2, props.theme.colors.primary)}
+        color: ${props => lighten(0.2, props.theme.colors.secondary)};
       }
     }
   }

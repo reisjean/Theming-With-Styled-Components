@@ -14,12 +14,6 @@ export function Main(){
           Aspernatur rerum in tenetur impedit voluptatem incidunt ipsam quas nobis porro deserunt pariatur.<br/>
           Delectus exercitationem voluptatibus id, eius aliquid maxime illum voluptas?
         </p>
-
-        {/* <input
-          type="color"
-          value={primary}
-          onChange={event => handleColor({ event })}
-        /> */}
       </div>
 
       <nav>

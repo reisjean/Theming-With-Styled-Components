@@ -1,19 +1,19 @@
-import React, { createContext, useCallback, useContext, useState } from 'react';
+import React, { ChangeEvent, createContext, useCallback, useContext, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { firstTheme, secondTheme } from '../styles/themes';
+import themes from '../styles/themes';
 
 interface ThemeContextData {
   toggleTheme(): void;
   theme: Theme;
-  setPrimaryColor(color: string): void;
+  setColor(event:ChangeEvent<HTMLInputElement>): void;
 }
 
 interface Theme {
   name: string;
   colors: {
     primary: string,
-    text: string,
-    background: string
+    secondary: string,
+    text: string
   }
 }
 
@@ -21,31 +21,31 @@ const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData);
 export const useTheme = () => useContext(ThemeContext);
 
 export const CustomThemeProvider: React.FC = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(firstTheme);
+  const [theme, setTheme] = useState<Theme>(themes[0]);
 
   const toggleTheme = useCallback(() => {
-    if (theme.name === 'first'){
-      setTheme(secondTheme);
-    }
-    else if (theme.name === 'second') {
-      setTheme(firstTheme);
+    const selectedTheme = themes.findIndex(t => t.name === theme.name);
+
+    if (selectedTheme < themes.length - 1) {
+      setTheme(themes[selectedTheme + 1]);
+    }else{
+      setTheme(themes[0]);
     }
   }, [theme]);
 
-  const setPrimaryColor = useCallback((color: string) => {   
+  const setColor = useCallback((event) => {   
     const newTheme = {
       ...theme,
       colors: {
         ...theme.colors,
-        primary: color
+        [event.target.name]: event.target.value
       }
     }
-
     setTheme(newTheme);
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ toggleTheme, theme, setPrimaryColor }}>
+    <ThemeContext.Provider value={{ toggleTheme, theme, setColor }}>
       <ThemeProvider theme={theme}>
         {children}
       </ThemeProvider>

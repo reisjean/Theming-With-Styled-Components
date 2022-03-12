@@ -4,14 +4,14 @@ import { useTheme } from '../../hooks/theme';
 import { Container, ComponentButton } from './styles';
 
 function Button() {
-  const { toggleTheme, setPrimaryColor, theme } = useTheme();
+  const { toggleTheme, setColor,  theme } = useTheme();
 
   const handleToggleTheme = () => {
     toggleTheme();
   }
 
-  function handleSetPrimaryColor({ event }: { event: ChangeEvent<HTMLInputElement>; }){
-    setPrimaryColor(event.target.value);
+  function handleSetColor({ event }: { event: ChangeEvent<HTMLInputElement>; }){
+    setColor(event);
   }
 
   return (
@@ -22,8 +22,16 @@ function Button() {
 
       <input
         type="color"
+        name="primary"
         value={theme.colors.primary}
-        onChange={event => handleSetPrimaryColor({ event })}
+        onChange={event => handleSetColor({ event })}
+      />
+
+      <input
+        type="color"
+        name="secondary"
+        value={theme.colors.secondary}
+        onChange={event => handleSetColor({ event })}
       />
     </Container>
   );

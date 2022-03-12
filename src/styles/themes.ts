@@ -1,17 +1,28 @@
-export const firstTheme = {
-  name: 'first',
-  colors: {
-    primary: '#f05f0b',
-    text: '#fff',
-    background: '#2c3e50'
+const themes = [
+  {
+    name: 'default',
+    colors: {
+      primary: '#f05f0b',
+      secondary: '#89a1da',
+      text: '#fff'
+    }
+  },
+  {
+    name: 'theme-2',
+    colors: {
+      primary: '#8e44ad',
+      secondary: '#6db86d',
+      text: '#fff'
+    }
+  },
+  {
+    name: 'theme-3',
+    colors: {
+      primary: '#4697c7',
+      secondary: '#c0b26b',
+      text: '#fff'
+    }
   }
-}
+]
 
-export const secondTheme = {
-  name: 'second',
-  colors: {
-    primary: '#8e44ad',
-    text: '#fff',
-    background: '#e74c3c'
-  }
-}
+export default themes;
