@@ -1,2 +1,2 @@
-# Theming With Styled Components and Context API ReactJS
-Creating Themes with styled components and context api
+# Theming With Styled Components and Context API
+Creating and customize themes with styled components and context api
