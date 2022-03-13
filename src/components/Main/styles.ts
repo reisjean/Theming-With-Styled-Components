@@ -8,7 +8,9 @@ export const Container = styled.main`
   display: grid;
   grid-template-areas: "nav" "content";
   grid-template-rows: auto 1fr;
-  background-image: url(${bg});
+  background-image: linear-gradient(black, black), url(${bg});
+  background-size: cover;
+  background-blend-mode: saturation;
 
   .content{
     grid-area: content;
@@ -31,23 +33,6 @@ export const Container = styled.main`
       background-color: ${props => transparentize(0.8, props.theme.colors.secondary)};
       padding: 1rem 2rem;
       border: 2px solid ${props => darken(0.2, props.theme.colors.primary)};
-    }
-  }
-
-  nav{
-    grid-area: nav;
-    background-color: ${props => darken(0.25, props.theme.colors.secondary)};
-    padding: 0.6rem 2rem;
-
-    ul{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      li{
-        padding: 0 1rem;
-        color: ${props => lighten(0.2, props.theme.colors.secondary)};
-      }
     }
   }
 `;

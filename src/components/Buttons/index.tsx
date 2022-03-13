@@ -3,7 +3,7 @@ import { useTheme } from '../../hooks/theme';
 
 import { Container, ComponentButton } from './styles';
 
-function Button() {
+function Buttons() {
   const { toggleTheme, setColor,  theme } = useTheme();
 
   const handleToggleTheme = () => {
@@ -37,4 +37,4 @@ function Button() {
   );
 }
 
-export default Button;
+export default Buttons;

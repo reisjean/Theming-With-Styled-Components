@@ -4,7 +4,7 @@ import { CentralizedFlex } from '../../styles/global';
 
 export const Container = styled.footer`
   grid-area: footer;
-  background-color: ${props => darken(0.2, props.theme.colors.primary)};
+  background-color: ${props => darken(0.2, props.theme.colors.secondary)};
   padding: 0.5rem 0;
   ${CentralizedFlex};
 

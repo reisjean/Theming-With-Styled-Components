@@ -19,8 +19,16 @@ const themes = [
     name: 'theme-3',
     colors: {
       primary: '#4697c7',
-      secondary: '#c0b26b',
+      secondary: '#DCB909',
       text: '#fff'
+    }
+  },
+  {
+    name: 'dark',
+    colors: {
+      primary: '#272727',
+      secondary: '#797979',
+      text: '#d6d6d6'
     }
   }
 ]
