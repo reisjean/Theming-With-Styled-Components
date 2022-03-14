@@ -19,7 +19,7 @@ export default createGlobalStyle`
   }
 
   body, input, textarea, button{
-    font-family: 'Hubballi', cursive;
+    font-family: 'Poppins', sans-serif;
   }
 
   a {
@@ -44,6 +44,6 @@ export default createGlobalStyle`
     display: grid;
     grid-template-areas: "header" "main" "footer";
     grid-template-columns: auto;
-    grid-template-rows: 80px calc(100vh - 115px) 35px;
+    grid-template-rows: 130px calc(100vh - 165px) 35px;
   }
 `;

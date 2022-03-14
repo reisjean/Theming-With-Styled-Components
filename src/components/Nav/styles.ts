@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { darken, lighten } from 'polished';
+import { darken, lighten, saturate } from 'polished';
 
 export const Container = styled.nav`
   grid-area: nav;
-  background-color: ${props => darken(0.25, props.theme.colors.secondary)};
-  padding: 0.6rem 2rem;
+  background-color: ${props => darken(0.15, props.theme.colors.secondary)};
+  padding: 1rem;
 
   ul{
     display: flex;
@@ -13,7 +13,18 @@ export const Container = styled.nav`
     
     li{
       padding: 0 1rem;
+      font-size: 1rem;
       color: ${props => lighten(0.2, props.theme.colors.secondary)};
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:first-child{
+        font-weight: bold;
+      }
+
+      &:hover{
+        color: ${props => saturate(0.2, props.theme.colors.primary)};
+      }
     }
   }
 `;

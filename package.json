@@ -2,6 +2,7 @@
   "name": "theming-like-a-boss",
   "version": "0.1.0",
   "private": false,
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -18,7 +19,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "dev": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

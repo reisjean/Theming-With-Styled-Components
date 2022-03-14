@@ -16,8 +16,8 @@ export const Container = styled.div`
 
 export const ComponentButton = styled.button`
   font-size: 1rem;
-  padding: 1rem 2rem;
-  background: ${props => darken(0.2, props.theme.colors.primary)};
+  padding: 0.5rem 1.5rem;
+  background: ${props => darken(0.1, props.theme.colors.secondary)};
   color: ${props => props.theme.colors.text};
   border: 2px solid ${props => lighten(0.25, props.theme.colors.primary)};
   border-radius: 2px;

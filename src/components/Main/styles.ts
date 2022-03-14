@@ -21,16 +21,20 @@ export const Container = styled.main`
 
     h1{
       color: ${props => lighten(0.15, props.theme.colors.secondary)};
-      font-size: 7rem;
+      font-size: 5rem;
+
+      i{
+        color: ${props => darken(0.2, props.theme.colors.secondary)};
+      }
     }
 
     p{
-      font-size: 1.4rem;
+      font-size: 1rem;
       text-align: center;
-      line-height: 1.1;
+      line-height: 1.4;
       color: ${props => props.theme.colors.text};
       margin: 2rem 0;
-      background-color: ${props => transparentize(0.8, props.theme.colors.secondary)};
+      background-color: ${props => darken(0.2, transparentize(0.8, props.theme.colors.secondary))};
       padding: 1rem 2rem;
       border: 2px solid ${props => darken(0.2, props.theme.colors.primary)};
     }

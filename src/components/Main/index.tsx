@@ -4,7 +4,7 @@ import { Nav } from '../Nav'
 
 export function Main(){
   return (
-    <Container>
+    <Container aria-label='teste'>
       <div className="content">
         <h1>Theming like a <i>boss</i></h1>
 
